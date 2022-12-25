@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import axios, { AxiosResponse } from 'axios';
+import { SqlHelper } from '../helpers/sql.helpers';
 
 interface Post {
     userId: Number;
@@ -12,12 +13,18 @@ interface Post {
 const getPosts = async (req: Request, res: Response, next: NextFunction) => {
     // get some posts
     
-    let result = { "hi": "Hello", "world": "server is running!" };
-    
-    return res.status(200).json({
-        "Hello World!": "Hi!", 
-        result
-    });
+    SqlHelper.OpenConnection()
+      .then((connection) => {
+        return res.status(200).json({
+          connection
+        });
+      })
+        .catch((errrror) => {
+        return res.status(567).json({
+          errrror
+        });
+          
+      });
 };
 
 // getting a single post
