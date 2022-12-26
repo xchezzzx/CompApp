@@ -3,7 +3,7 @@ CREATE TABLE [dbo].[team]
 [id] [int] NOT NULL IDENTITY(1, 1),
 [name] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 [icon] [image] NULL,
-[email] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[email] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [sum_points] [int] NULL,
 [date_create] [datetime] NOT NULL,
 [date_update] [datetime] NOT NULL,
