@@ -30,7 +30,7 @@ const getPost = async (req: Request, res: Response, next: NextFunction) => {
 // updating a post
 const updatePost = async (req: Request, res: Response, next: NextFunction) => {
     // get the post id from the req.params
-    let id: string = req.params.id;
+    let id: string = req.params.id;                                                                                        
     // get the data from req.body
     let title: string = req.body.title ?? null;
     let body: string = req.body.body ?? null;
