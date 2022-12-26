@@ -1,8 +1,9 @@
 import { Connection, Error, SqlClient, Query, ProcedureManager } from "msnodesqlv8";
-import { DB_CONNECTION_STRING, UserQueries } from "../constants/sql.constants";
+// import { DB_CONNECTION_STRING, UserQueries } from "../constants/sql.constants";
 import { ErrorHelper } from "./error.helper";
 import { ErrorCodes, ErrorMessages } from "../constants/error.constants";
 import { SystemError } from "../entities/error.entities";
+import { StaticEnvironment } from "../core/env.static";
 
 export class SqlHelper {
   static sql: SqlClient = require("msnodesqlv8");
@@ -10,7 +11,7 @@ export class SqlHelper {
   private static OpenConnection(): Promise<Connection> {
     return new Promise<Connection>((resolve, reject) => {
       SqlHelper.sql.open(
-        DB_CONNECTION_STRING,
+        StaticEnvironment.dbConnectionString,
         (connectionError: Error, connection: Connection) => {
           if (connectionError) {
             reject(ErrorHelper.parseError(ErrorMessages.dbConnectionError, ErrorCodes.dbConnectionError));
