@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction as Next } from "express";
 import { SystemError } from "../entities/error.entities";
+import { UserInterface } from "../entities/user.entities";
 import { ErrorHelper } from "../helpers/error.helper";
 import { RequestHelper } from "../helpers/request.helper";
 import { SqlHelper } from "../helpers/sql.helper";
@@ -40,11 +41,18 @@ const getUserById = async (req: Request, res: Response, next: Next) => {
 
 const updateUserById = async (req: Request, res: Response, next: Next) => {
 
-  const currentId = req.params.id;
-
-  return res.status(200).json({
-    update: `user by id:${currentId}`
-  });
+  const request: UserInterface = RequestHelper.parseRequestBody(req);
+  
+  console.log(request);
+  
+    UserService.updateUserById(request)
+      .then((user) => {
+        return res.status(200).json(user);
+      })
+      .catch((error) => {
+        return ErrorHelper.handleError(error, res);
+      });
+  
 };
 
 const deleteUserById = async (req: Request, res: Response, next: Next) => {
