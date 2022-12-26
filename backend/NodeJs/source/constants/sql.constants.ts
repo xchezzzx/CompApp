@@ -1,6 +1,7 @@
 export class UserQueries {
-    //Test query
-    public static getUsers: string = "SELECT * FROM product"
+  //Test query
+  public static getUsers: string = "SELECT * FROM product";
+  public static getUserById: string = `SELECT * FROM product WHERE id = ?`;
 }
 
 //Test connection string

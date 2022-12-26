@@ -1,60 +1,67 @@
 import { Request, Response, NextFunction as Next } from "express";
-import { SqlHelper } from "../helpers/sql.helpers";
+import { SystemError } from "../entities/error.entities";
+import { ErrorHelper } from "../helpers/error.helper";
+import { RequestHelper } from "../helpers/request.helper";
+import { SqlHelper } from "../helpers/sql.helper";
 import { UserService } from "../services/user.service";
 
 const getUsers = async (req: Request, res: Response, next: Next) => {
-    
+
   UserService.getUsers()
     .then((users) => {
-        return res.status(200).json({
-          types: users,
-        });
+      return res.status(200).json(users);
     })
     .catch((error) => {
-        return res.status(400).json({
-          types: error,
-        });
+      return ErrorHelper.handleError(error, res)
     })
-  
-    
+
+
 };
 
 const getUserById = async (req: Request, res: Response, next: Next) => {
+
+  const request: number | SystemError = RequestHelper.parseStringInputToNumber(req.params.id);
+
+  if (typeof (request) === "number") {
+    UserService.getUserById(request)
+      .then((user) => {
+        return res.status(200).json(user);
+      })
+      .catch((error) => {
+        return ErrorHelper.handleError(error, res);
+      });
+  } else  {
+    return ErrorHelper.handleError(request, res);
+  }
   
-    const currentId = req.params.id;
-    
-  UserService.getUserById(currentId)
-    .then((user) => {
-    
-  })
-  
+
 
 };
 
 const updateUserById = async (req: Request, res: Response, next: Next) => {
 
-    const currentId = req.params.id;
+  const currentId = req.params.id;
 
-    return res.status(200).json({
-      update: `user by id:${currentId}`
-    });
+  return res.status(200).json({
+    update: `user by id:${currentId}`
+  });
 };
 
 const deleteUserById = async (req: Request, res: Response, next: Next) => {
 
-    const currentId = req.params.id;
+  const currentId = req.params.id;
 
-    return res.status(200).json({
-      delete: `user by id:${currentId}`,
-    });
+  return res.status(200).json({
+    delete: `user by id:${currentId}`,
+  });
 };
 
 const addUser = async (req: Request, res: Response, next: Next) => {
-  
 
-    return res.status(200).json({
-      add: "user",
-    });
+
+  return res.status(200).json({
+    add: "user",
+  });
 };
 
 export default {

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import axios, { AxiosResponse } from 'axios';
-import { SqlHelper } from '../helpers/sql.helpers';
+import { SqlHelper } from '../helpers/sql.helper';
 
 interface Post {
     userId: Number;
