@@ -13,18 +13,6 @@ interface Post {
 const getPosts = async (req: Request, res: Response, next: NextFunction) => {
     // get some posts
     
-    SqlHelper.OpenConnection()
-      .then((connection) => {
-        return res.status(200).json({
-          connection
-        });
-      })
-        .catch((errrror) => {
-        return res.status(567).json({
-          errrror
-        });
-          
-      });
 };
 
 // getting a single post

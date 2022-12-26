@@ -1,21 +1,21 @@
 import { Request, Response, NextFunction as Next } from "express";
-import { getUsersService } from "../services/user.services"
 import { SqlHelper } from "../helpers/sql.helpers";
+import { UserService } from "../services/user.service";
 
 const getUsers = async (req: Request, res: Response, next: Next) => {
     
-  //const users = await getUsersService(); 
-  
-  SqlHelper.OpenConnection() .then((connection) => {
-    return res.status(200).json({
-      connection
-    });
-  })
-    .catch((errrror) => {
-      return res.status(567).json({
-      errrror
+  UserService.getUsers()
+    .then((users) => {
+        return res.status(200).json({
+          types: users,
+        });
     })
-  })
+    .catch((error) => {
+        return res.status(400).json({
+          types: error,
+        });
+    })
+  
     
 };
 
