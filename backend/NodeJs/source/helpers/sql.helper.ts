@@ -22,11 +22,11 @@ export class SqlHelper {
     });
   }
 
-  public static GetQueryArrayResult<T>(query: string): Promise<T[]> {
+  public static GetQueryArrayResult<T>(query: string, ...params: (number | string)[]): Promise<T[]> {
     return new Promise<T[]>((resolve, reject) => {
       this.OpenConnection()
         .then((connection: Connection) => {
-          connection.query(query, (queryError: Error | undefined, queryResult: T[] | undefined) => {
+          connection.query(query, params, (queryError: Error | undefined, queryResult: T[] | undefined) => {
             if (queryError) {
               reject(ErrorHelper.parseError(ErrorMessages.dbQueryError, ErrorCodes.dbQueryError));
             } else {
@@ -63,6 +63,27 @@ export class SqlHelper {
               }
             }
           })
+        })
+
+        .catch((error: SystemError) => {
+          reject(error);
+        });
+    });
+  }
+
+  public static GetQueryNoResult(query: string, ...params: (number | string)[]): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      this.OpenConnection()
+        .then((connection: Connection) => {
+
+          connection.query(query, params, (queryError: Error | undefined) => {
+            if (queryError) {
+              reject(ErrorHelper.parseError(ErrorMessages.dbQueryError, ErrorCodes.dbQueryError));
+            } else {
+              resolve();
+            }
+          });
+          
         })
 
         .catch((error: SystemError) => {

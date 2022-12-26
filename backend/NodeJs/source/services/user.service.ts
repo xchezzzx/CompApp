@@ -59,6 +59,19 @@ export class UserService {
         })
     }
 
+    public static updateUserById(user: UserInterface): Promise<UserInterface> {
+        return new Promise<UserInterface>((resolve, reject) => {
+            SqlHelper.GetQueryNoResult(UserQueries.updateUserById, user.status_id, user.id)
+                .then(() => {
+                    resolve(user);
+                })
+                .catch((error: SystemError) => {
+                    reject(error);
+                })
+            
+        })
+    }
+
     private static parseLocalUserInterface(localUser: LocalUserInterface): UserInterface {
         return {
             id: localUser.id,

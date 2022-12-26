@@ -2,6 +2,8 @@ export class UserQueries {
   //Test query
   public static getUsers: string = "SELECT * FROM product";
   public static getUserById: string = `SELECT * FROM product WHERE id = ?`;
+  //public static updateUserFirstName: string = "UPDATE product SET first_name = ? WHERE id = ?";
+  public static updateUserById: string = `UPDATE product SET status_id = ? WHERE id = ?`;
 }
 
 //Test connection string
