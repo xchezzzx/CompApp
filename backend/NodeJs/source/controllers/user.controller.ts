@@ -23,9 +23,12 @@ const getUserById = async (req: Request, res: Response, next: Next) => {
   
     const currentId = req.params.id;
     
-    return res.status(200).json({
-        get: `user by id:${currentId}`
-    });
+  UserService.getUserById(currentId)
+    .then((user) => {
+    
+  })
+  
+
 };
 
 const updateUserById = async (req: Request, res: Response, next: Next) => {

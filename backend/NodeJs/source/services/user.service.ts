@@ -23,7 +23,7 @@ interface LocalUserInterface {
 
 export class UserService {
     
-    public static getUsers() {
+    public static getUsers(): Promise<UserInterface[]> {
         return new Promise<UserInterface[]>((resolve, reject) => {
             
             const result: UserInterface[] = [];
@@ -42,6 +42,18 @@ export class UserService {
             })
         })
     };
+
+    public static getUserById(id: string): Promise<UserInterface> {
+        return new Promise<UserInterface>((resolve, reject) => {
+            let result: UserInterface;
+
+            SqlHelper.GetQueryArrayResult<LocalUserInterface>(UserQueries.getUsers)
+
+            .then((queryResult: LocalUserInterface[]) => {
+                resolve(this.parseLocalUserInterface(queryResult[0]));    
+            })
+        })
+    }
 
     private static parseLocalUserInterface(localUser: LocalUserInterface): UserInterface {
         return {
