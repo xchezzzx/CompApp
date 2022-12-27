@@ -4,7 +4,6 @@ import morgan from "morgan";
 import routes from "./routes/routes";
 import userRoutes from "./routes/user.routes"
 import { StaticEnvironment } from "./core/env.static";
-
 const router: Express = express();
 
 /** Logging */
@@ -45,7 +44,7 @@ router.use((req, res, next) => {
 
 /** Server */
 const httpServer = http.createServer(router);
-const PORT: any = StaticEnvironment.serverPort ?? 6060;
+const PORT: any = (StaticEnvironment.serverPort ?? 6060);
 httpServer.listen(PORT, () =>
   console.log(`The server is running on port ${PORT}`)
 );
