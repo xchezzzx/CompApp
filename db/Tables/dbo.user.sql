@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[user]
 [role_id] [int] NOT NULL,
 [points_summary] [int] NULL,
 [date_create] [datetime] NOT NULL,
-[date_modify] [datetime] NOT NULL,
+[date_update] [datetime] NOT NULL,
 [user_create_id] [int] NOT NULL,
 [user_update_id] [int] NOT NULL,
 [status_id] [int] NOT NULL

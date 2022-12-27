@@ -1,14 +1,14 @@
 CREATE TABLE [dbo].[competition]
 (
-[id] [int] NOT NULL,
+[id] [int] NOT NULL IDENTITY(1, 1),
 [competition_name] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 [duration] [time] NOT NULL,
 [start_time] [datetime] NOT NULL,
 [end_time] [datetime] NOT NULL,
 [number_conc_tasks] [int] NOT NULL,
 [hashtag] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-[date_create] [datetime] NOT NULL,
-[date_update] [datetime] NOT NULL,
+[date_create] [datetime] NOT NULL CONSTRAINT [DF_competition_date_create] DEFAULT (getdate()),
+[date_update] [datetime] NOT NULL CONSTRAINT [DF_competition_date_update] DEFAULT (getdate()),
 [user_create_id] [int] NOT NULL,
 [user_update_id] [int] NOT NULL,
 [status_id] [int] NOT NULL
