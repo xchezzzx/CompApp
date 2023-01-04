@@ -1827,23 +1827,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\omilyukov\\.nuget\\packages\\": {},
+    "C:\\Users\\vereg\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\sources\\CompApp\\frontend\\Blazor\\Client\\Blazor.Client.csproj",
+      "projectUniqueName": "C:\\CCMS\\frontend\\Blazor\\Client\\Blazor.Client.csproj",
       "projectName": "Blazor.Client",
-      "projectPath": "D:\\sources\\CompApp\\frontend\\Blazor\\Client\\Blazor.Client.csproj",
-      "packagesPath": "C:\\Users\\omilyukov\\.nuget\\packages\\",
-      "outputPath": "D:\\sources\\CompApp\\frontend\\Blazor\\Client\\obj\\",
+      "projectPath": "C:\\CCMS\\frontend\\Blazor\\Client\\Blazor.Client.csproj",
+      "packagesPath": "C:\\Users\\vereg\\.nuget\\packages\\",
+      "outputPath": "C:\\CCMS\\frontend\\Blazor\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\omilyukov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vereg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1852,14 +1852,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\sources\\CompApp\\frontend\\Blazor\\Shared\\Blazor.Shared.csproj": {
-              "projectPath": "D:\\sources\\CompApp\\frontend\\Blazor\\Shared\\Blazor.Shared.csproj"
+            "C:\\CCMS\\frontend\\Blazor\\Shared\\Blazor.Shared.csproj": {
+              "projectPath": "C:\\CCMS\\frontend\\Blazor\\Shared\\Blazor.Shared.csproj"
             }
           }
         }
