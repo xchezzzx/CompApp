@@ -51,3 +51,11 @@ C:\CCMS\frontend\Blazor\Server\obj\Debug\net7.0\refint\Blazor.Server.dll
 C:\CCMS\frontend\Blazor\Server\obj\Debug\net7.0\Blazor.Server.pdb
 C:\CCMS\frontend\Blazor\Server\obj\Debug\net7.0\Blazor.Server.genruntimeconfig.cache
 C:\CCMS\frontend\Blazor\Server\obj\Debug\net7.0\ref\Blazor.Server.dll
+C:\CCMS\frontend\Blazor\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\CCMS\frontend\Blazor\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\CCMS\frontend\Blazor\Server\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\CCMS\frontend\Blazor\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\CCMS\frontend\Blazor\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\CCMS\frontend\Blazor\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\CCMS\frontend\Blazor\Server\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\CCMS\frontend\Blazor\Server\bin\Debug\net7.0\Microsoft.Extensions.Features.dll

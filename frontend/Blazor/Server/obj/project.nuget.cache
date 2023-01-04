@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nGI4e4ZX2W2b0WuRPNQppvnxO6qxxTHGxytJ/QDCtAUdEhDPKsplO3N9wOowndyZTGAYEodR96cszFMyr7UmOg==",
+  "dgSpecHash": "J6x+6jd+bC48+BACslBhYW0E3BEcmQQHjhKLNiXfjherh81yuwhoCJ4hcFO53a14asjflDywun9rFf41F32i5Q==",
   "success": true,
   "projectFilePath": "C:\\CCMS\\frontend\\Blazor\\Server\\Blazor.Server.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,14 @@
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.1\\microsoft.aspnetcore.components.web.7.0.1.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.1\\microsoft.aspnetcore.components.webassembly.7.0.1.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\7.0.1\\microsoft.aspnetcore.components.webassembly.server.7.0.1.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.1\\microsoft.aspnetcore.connections.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\7.0.1\\microsoft.aspnetcore.http.connections.client.7.0.1.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\7.0.1\\microsoft.aspnetcore.http.connections.common.7.0.1.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.1\\microsoft.aspnetcore.metadata.7.0.1.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\7.0.1\\microsoft.aspnetcore.signalr.client.7.0.1.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\7.0.1\\microsoft.aspnetcore.signalr.client.core.7.0.1.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\7.0.1\\microsoft.aspnetcore.signalr.common.7.0.1.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\7.0.1\\microsoft.aspnetcore.signalr.protocols.json.7.0.1.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.1\\microsoft.extensions.configuration.binder.7.0.1.nupkg.sha512",
@@ -19,6 +26,7 @@
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.configuration.json\\7.0.0\\microsoft.extensions.configuration.json.7.0.0.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.features\\7.0.1\\microsoft.extensions.features.7.0.1.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\7.0.0\\microsoft.extensions.fileproviders.physical.7.0.0.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\7.0.0\\microsoft.extensions.filesystemglobbing.7.0.0.nupkg.sha512",
@@ -30,7 +38,8 @@
     "C:\\Users\\vereg\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.1\\microsoft.jsinterop.webassembly.7.0.1.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\vereg\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\vereg\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\vereg\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

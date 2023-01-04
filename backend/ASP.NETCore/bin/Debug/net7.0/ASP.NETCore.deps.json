@@ -9,6 +9,7 @@
       "ASP.NETCore/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "7.0.1",
+          "Microsoft.EntityFrameworkCore.Design": "7.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.1",
           "Swashbuckle.AspNetCore": "6.4.0"
