@@ -2266,23 +2266,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vereg\\.nuget\\packages\\": {},
+    "C:\\Users\\omilyukov\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CCMS\\frontend\\BlazorWeb\\BlazorWeb.csproj",
+      "projectUniqueName": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\BlazorWeb.csproj",
       "projectName": "BlazorWeb",
-      "projectPath": "C:\\CCMS\\frontend\\BlazorWeb\\BlazorWeb.csproj",
-      "packagesPath": "C:\\Users\\vereg\\.nuget\\packages\\",
-      "outputPath": "C:\\CCMS\\frontend\\BlazorWeb\\obj\\",
+      "projectPath": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\BlazorWeb.csproj",
+      "packagesPath": "C:\\Users\\omilyukov\\.nuget\\packages\\",
+      "outputPath": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\vereg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\omilyukov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2291,7 +2291,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
