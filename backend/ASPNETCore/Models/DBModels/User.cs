@@ -11,8 +11,8 @@ namespace ASPNETCore.Models.DBModels
             CompetitionUserUpdates = new HashSet<Competition>();
             InverseUserCreate = new HashSet<User>();
             InverseUserUpdate = new HashSet<User>();
-            TaskUserCreates = new HashSet<Task>();
-            TaskUserUpdates = new HashSet<Task>();
+            TaskUserCreates = new HashSet<CompTask>();
+            TaskUserUpdates = new HashSet<CompTask>();
             TeamUserCreates = new HashSet<Team>();
             TeamUserUpdates = new HashSet<Team>();
         }
@@ -38,8 +38,8 @@ namespace ASPNETCore.Models.DBModels
         public virtual ICollection<Competition> CompetitionUserUpdates { get; set; }
         public virtual ICollection<User> InverseUserCreate { get; set; }
         public virtual ICollection<User> InverseUserUpdate { get; set; }
-        public virtual ICollection<Task> TaskUserCreates { get; set; }
-        public virtual ICollection<Task> TaskUserUpdates { get; set; }
+        public virtual ICollection<CompTask> TaskUserCreates { get; set; }
+        public virtual ICollection<CompTask> TaskUserUpdates { get; set; }
         public virtual ICollection<Team> TeamUserCreates { get; set; }
         public virtual ICollection<Team> TeamUserUpdates { get; set; }
     }

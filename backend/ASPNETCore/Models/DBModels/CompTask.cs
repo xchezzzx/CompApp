@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ASPNETCore.Models.DBModels
 {
-    public partial class Task
+    public partial class CompTask
     {
         public int Id { get; set; }
         public string TaskName { get; set; } = null!;
