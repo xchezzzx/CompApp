@@ -25,6 +25,21 @@ namespace ASPNETCore.Hubs
             }
 
             await Clients.All.SendAsync("Send", competitionsDT);
+
         }
+
+        public async void AddCompetition(Competition competition)
+        {
+            try
+            {
+                _context.Competitions.Add(competition);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
+            await Clients.Caller.SendAsync("Add", "Success");
+            }
     }
 }
