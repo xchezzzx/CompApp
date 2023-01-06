@@ -1,0 +1,199 @@
+﻿@page "/competitions/add"
+
+<div>
+	<div class="row mb-5">
+		<h3>Adding new competition:</h3>
+	</div>
+
+
+	@if (!flag)
+	{
+		<div class="row">
+			<div class="col-6 offset-1">
+				<div>
+					@newCompetitionName
+				</div>
+
+				<form onsubmit="@sendNewCompetition()">
+
+					@*competition name*@
+					<div class="row mb-4">
+						<label for="inputCompName" class="col-sm-3 col-form-label">Name</label>
+						<div class="col-sm-9">
+							<input
+								type="text"
+								class="form-control"
+								id="inputCompName"
+								placeholder="Enter competition name"
+								@bind="newCompetitionName"
+							>
+						</div>
+					</div>
+
+					<div class="row mb-4">
+						<label for="inputCompDate" class="col-sm-3 col-form-label">Date</label>
+						<div class="col-sm-9">
+							<input type="date" class="form-control" id="inputCompDate" @bind="@newCompetitionDate">
+						</div>
+					</div>
+
+					<div class="row mb-4">
+						<label for="inputStartTime" class="col-sm-3 col-form-label">Start time</label>
+						<div class="col-sm-9">
+							<input type="time" class="form-control" id="inputStartTime">
+							<div id="emailHelp" class="form-text">Enter competition start time</div>
+						</div>
+					</div>
+
+					<div class="row mb-1">
+						<label for="inputEndTime" class="col-sm-3 col-form-label">End time</label>
+						<div class="col-sm-9">
+							<input type="time" class="form-control" id="inputEndTime">
+							<div id="emailHelp" class="form-text">Enter competition end time</div>
+						</div>
+					</div>
+
+					<div class="row mb-1">
+						<div class="col-sm-9 offset-3 text-center">
+							or
+						</div>
+					</div>
+
+					<div class="row mb-4">
+						<label for="inputDuration" class="col-sm-3 col-form-label">Duration</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control" id="inputDuration">
+							<div id="emailHelp" class="form-text">Enter duration of the event in hours</div>
+						</div>
+					</div>
+
+					<div class="row mb-4">
+						<label for="customRange3" class="col-sm-3 col-form-label">Concurrent tasks</label>
+						<div class="col-sm-9">
+							<select class="form-select" aria-label="Default select example">
+								<option selected>Choose from 1 to 5</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+							<div id="emailHelp" class="form-text">Choose amount of concurrent tasks</div>
+						</div>
+						@*<input type="range" class="form-range" min="1" max="6" step="1" id="customRange3">*@
+					</div>
+
+					<div class="row mb-4">
+						<label for="inputEmail3" class="col-sm-3 col-form-label">Hashtag</label>
+						<div class="col-sm-9">
+							<div class="input-group">
+								<span class="input-group-text">#</span>
+								<input type="text" class="form-control" id="inputEmail3" placeholder="Hashtag">
+
+							</div>
+							<div id="HashtagHelp" class="form-text">Enter the competition hashtag for Twitter</div>
+						</div>
+					</div>
+
+					@*confirm button*@
+
+					<label for="submitBtn" class="col-sm-3 col-form-label">Add competition</label>
+					<input type="submit" id="submitBtn" class="btn btn-primary text-end" />
+				</form>
+			</div>
+		</div>
+	}
+	else
+	{
+		<h3>@messageFromServer</h3>
+	}
+</div>
+
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead class="table-light">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Date of competition</th>
+				<th>Start Time</th>
+				<th>End Time</th>
+				<th>Duration</th>
+				<th>Number of Concurrent Tasks</th>
+				<th>Event Twitter Hashtag</th>
+			</tr>
+		</thead>
+		<tbody>
+				<tr>
+					<td>@newCompetition.Id</td>
+					<td>@newCompetition.CompetitionName</td>
+					<td>@newCompetition.StartTime.ToLongDateString()</td>
+					<td>@newCompetition.StartTime.ToString("t")</td>
+					<td>@newCompetition.EndTime.ToString("t")</td>
+					<td>@newCompetition.Duration.ToString("%h") hour(s)</td>
+					<td>@newCompetition.NumberConcTasks</td>
+					<td>
+						<a href="https://twitter.com/search?q=@newCompetition.Hashtag&src=trend_click&vertical=trends" target="_blank">
+							@newCompetition.Hashtag
+						</a>
+					</td>
+				</tr>
+		</tbody>
+	</table>
+</div>
+
+
+
+@code {
+
+	string newCompetitionName;
+	DateTime newCompetitionDate;
+	DateTime newCompetitionStartTime;
+	DateTime newCompetitionEndTime;
+	TimeSpan newCompetitionDuration;
+	int newCompetitionNumberConcTasks;
+	string newCompetitionHashtag;
+
+	string messageFromServer = string.Empty;
+	bool flag = false;
+
+	CompetitionDT newCompetition = null;
+
+	protected override async Task OnInitializedAsync()
+	{
+		newCompetitionName = string.Empty;
+		newCompetitionDate = DateTime.Now;
+	}
+
+
+	public void AddNewCompetition()
+	{
+		newCompetition = new CompetitionDT()
+		{
+			CompetitionName = newCompetitionName,
+		};
+
+	}
+
+	public async Task sendNewCompetition()
+	{
+		AddNewCompetition();
+
+		if (newCompetition != null)
+		{
+			HubConnection connection = new HubConnectionBuilder()
+    				.WithUrl("https://localhost:7206/competitions")
+    				.WithAutomaticReconnect()
+    				.Build();
+
+    		connection.On<string>("Add", msg =>
+    		{
+				messageFromServer = msg;
+    			flag = true;
+    		});
+
+    		await connection.StartAsync();
+    		await connection.InvokeAsync("AddCompetition", newCompetition);			
+		}
+    }
+}

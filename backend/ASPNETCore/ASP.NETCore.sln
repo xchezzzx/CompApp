@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETCore", "..\ASPNETCore\ASPNETCore.csproj", "{0A64C77B-CA71-495C-AD6E-B1D32D278105}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPNETCore", "ASPNETCore.csproj", "{0A64C77B-CA71-495C-AD6E-B1D32D278105}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWeb", "..\..\frontend\BlazorWeb\BlazorWeb.csproj", "{10EF601C-A305-4756-9783-EF1B97E4C81B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWeb", "..\..\frontend\BlazorWeb\BlazorWeb.csproj", "{10EF601C-A305-4756-9783-EF1B97E4C81B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
