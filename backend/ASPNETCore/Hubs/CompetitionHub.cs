@@ -7,11 +7,13 @@ namespace ASPNETCore.Hubs
 {
     public class CompetitionHub : Hub
     {
+
+        CCMSContext _context = new CCMSContext();
+
         public async void SendCompetitions()
         {
             //List<User> users = _iuser.GetUsers.ToList();
 
-            CCMSContext _context = new CCMSContext();
 
             CompetitionRepository _repo = new CompetitionRepository(_context);
 
