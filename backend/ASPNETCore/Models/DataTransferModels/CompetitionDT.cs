@@ -6,9 +6,9 @@ namespace ASPNETCore.Models.DataTransferModels
     {
         public int Id { get; set; }
         public string CompetitionName { get; set; } = null!;
-        public string Duration { get; set; }
-        public string StartTime { get; set; }
-        public string EndTime { get; set; }
+        public TimeSpan Duration { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
         public int NumberConcTasks { get; set; }
         public string Hashtag { get; set; } = null!;
 
@@ -16,9 +16,9 @@ namespace ASPNETCore.Models.DataTransferModels
         {
             Id = competition.Id;
             CompetitionName = competition.CompetitionName;
-            Duration = competition.Duration.ToString();
-            StartTime = competition.StartTime.ToString();
-            EndTime = competition.EndTime.ToString();
+            Duration = competition.Duration;
+            StartTime = competition.StartTime;
+            EndTime = competition.EndTime;
             NumberConcTasks= competition.NumberConcTasks;
             Hashtag = competition.Hashtag;
         }
