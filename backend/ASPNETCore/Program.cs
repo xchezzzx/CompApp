@@ -50,7 +50,7 @@ using (var scope = app.Services.CreateScope())
 
     var context = services.GetRequiredService<CCMSContext>();
 
-    SQLHelper.OpenConnection(context);
+    //SQLHelper.OpenConnection(context);
 }
 
 app.UseCors("policy");

@@ -1,6 +1,6 @@
 ﻿using ASPNETCore.Models.DBModels;
 
-namespace ASPNETCore.Models.DataTransferModels
+namespace ASPNETCore.Models.DTModels
 {
     public class CompetitionDT
     {

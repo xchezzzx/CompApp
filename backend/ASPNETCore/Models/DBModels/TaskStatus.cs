@@ -7,12 +7,12 @@ namespace ASPNETCore.Models.DBModels
     {
         public TaskStatus()
         {
-            Tasks = new HashSet<Task>();
+            Tasks = new HashSet<CompTask>();
         }
 
         public int Id { get; set; }
         public string TaskStatusName { get; set; } = null!;
 
-        public virtual ICollection<Task> Tasks { get; set; }
+        public virtual ICollection<CompTask> Tasks { get; set; }
     }
 }
