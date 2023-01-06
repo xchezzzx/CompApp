@@ -105,5 +105,6 @@ else
 
         await connection.InvokeAsync("SendCompetitions");
 
+        await connection.DisposeAsync();
 	}
 }
