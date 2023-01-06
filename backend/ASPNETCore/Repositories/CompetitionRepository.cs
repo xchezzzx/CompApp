@@ -14,5 +14,10 @@ namespace ASPNETCore.Repositories
         }
 
         public List<Competition> competitions => _modelsContext.Competitions.Include(c => c.Status).ToList();
+        
+        
+        
+
+
     }
 }

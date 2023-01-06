@@ -21,7 +21,7 @@
 
 
 
-@if (flag == false)
+@if (CompetitionDT.flag == false)
 {
     <div class="text-center">
         <img src="./images/loading-waiting.gif"/>
@@ -44,7 +44,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in users)
+                @foreach (var item in CompetitionDT.users)
             {
                 <tr>
                     <td>@item.Id</td>
@@ -79,17 +79,16 @@ else
     //[Parameter]
     //public string Message { get; set; }
     //string message;
-    List<CompetitionDT> users;
-    bool flag = false;
+
 
     protected override async Task OnInitializedAsync()
     {
-        await fetchData();
+        if (CompetitionDT.flag == false) await fetchData();
     }
 
 	public async Task fetchData()
 	{
-        flag = false;
+        CompetitionDT.flag = false;
 
 		HubConnection connection = new HubConnectionBuilder()
 				.WithUrl("https://localhost:7206/competitions")
@@ -98,8 +97,8 @@ else
 
         connection.On<List<CompetitionDT>>("Send", msg =>
 		{
-			users = msg;
-			flag = true;
+            CompetitionDT.users = msg;
+            CompetitionDT.flag = true;
 		});
 		await connection.StartAsync();
 
