@@ -15,7 +15,5 @@
         {
         }
 
-        public static List<CompetitionDT> users;
-        public static bool flag = false;
     }
 }
