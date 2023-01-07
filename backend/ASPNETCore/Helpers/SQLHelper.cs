@@ -9,23 +9,7 @@ namespace ASPNETCore.Helpers
 
             //context.CompetitionStatuses.Add(new CompetitionStatus() { CompetitionStatusName = "asdaas"});
 
-            Competition competition = new Competition()
-            {
-                CompetitionName = "CompetitionName",
-                DateCreate = DateTime.Now,
-                DateUpdate = DateTime.Now,
-                EndTime = DateTime.Now.AddDays(1),
-                StartTime = DateTime.Now,
-                Duration = DateTime.Now.AddDays(1) - DateTime.Now,
-                Hashtag = "Hashtag",
-                NumberConcTasks = 3,
-                //Status= comps[0].Status,
-                StatusId = 1,
-                UserCreateId = 1,
-                UserUpdateId = 1
-            };
-
-            context.Competitions.Add(competition);
+            //context.Competitions.Add(competition);
 
             context.SaveChanges();
         }
@@ -59,7 +43,7 @@ namespace ASPNETCore.Helpers
                     }
                     }
                 };
-                _competition[0].Id = 10000;
+                
                 return _competition;
             }
         }

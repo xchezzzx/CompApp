@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ29tcGV0aXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/sources/CompApp/frontend/BlazorWeb/Pages/Authentication.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/sources/CompApp/frontend/BlazorWeb/Pages/Competitions.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcGV0aXRpb25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/sources/CompApp/frontend/BlazorWeb/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sources/CompApp/frontend/BlazorWeb/Shared/AccesControl.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFjY2VzQ29udHJvbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/sources/CompApp/frontend/BlazorWeb/Shared/SurveyPrompt.razor]

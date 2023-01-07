@@ -3,6 +3,7 @@ using ASPNETCore.Models.DTModels;
 using ASPNETCore.Models.DBModels;
 using ASPNETCore.Repositories;
 using Microsoft.AspNetCore.SignalR;
+using ASPNETCore.Interfaces;
 
 namespace ASPNETCore.Hubs
 {
@@ -43,9 +44,8 @@ namespace ASPNETCore.Hubs
 
             if (competition != null)
             {
-
-                CompetitionRepository _repo = new CompetitionRepository(_context);
-                _repo.addCompetiton(competition);
+                ICompetition _repo = new CompetitionRepository(_context);
+				_repo.addCompetiton(competition);
                 res = "success";
             }
 

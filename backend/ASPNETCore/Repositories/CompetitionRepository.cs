@@ -31,9 +31,10 @@ namespace ASPNETCore.Repositories
 
         public List<Competition> competitions => _modelsContext.Competitions.Include(c => c.Status).ToList();
 
-        public void addCompetiton(Competition competition) { _modelsContext.Competitions.Add(competition); _modelsContext.SaveChanges(); }
-
-
-
+        public void addCompetiton(Competition competition) 
+        { 
+            _modelsContext.Competitions.Add(competition); 
+            _modelsContext.SaveChanges(); 
         }
+    }
 }
