@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASPNETCore.Models.DBModels
 {
     public partial class Competition
     {
         public int Id { get; set; }
+
         public string CompetitionName { get; set; } = null!;
         public TimeSpan Duration { get; set; }
         public DateTime StartTime { get; set; }

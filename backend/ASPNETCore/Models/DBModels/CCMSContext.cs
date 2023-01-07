@@ -56,7 +56,6 @@ namespace ASPNETCore.Models.DBModels
                 entity.ToTable("competition");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.CompetitionName)

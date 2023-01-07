@@ -12,15 +12,15 @@ namespace ASPNETCore.Models.DTModels
         public int NumberConcTasks { get; set; }
         public string Hashtag { get; set; } = null!;
 
-        public CompetitionDT(Competition competition)
+        public CompetitionDT()
         {
-            Id = competition.Id;
-            CompetitionName = competition.CompetitionName;
-            Duration = competition.Duration;
-            StartTime = competition.StartTime;
-            EndTime = competition.EndTime;
-            NumberConcTasks= competition.NumberConcTasks;
-            Hashtag = competition.Hashtag;
+            //Id = competition.Id;
+            //CompetitionName = competition.CompetitionName;
+            //Duration = competition.Duration;
+            //StartTime = competition.StartTime;
+            //EndTime = competition.EndTime;
+            //NumberConcTasks= competition.NumberConcTasks;
+            //Hashtag = competition.Hashtag;
         }
     }
 }

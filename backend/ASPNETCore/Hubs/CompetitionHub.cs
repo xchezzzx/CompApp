@@ -8,12 +8,14 @@ namespace ASPNETCore.Hubs
 {
     public class CompetitionHub : Hub
     {
-        private readonly CCMSContext _context = new();
+        private CCMSContext _context = new CCMSContext();
+        
 
-        public async void SendCompetitions()
+        public async Task SendCompetitions()
         {
 
-            CompetitionRepository _repo = new(_context);
+
+            CompetitionRepository _repo = new CompetitionRepository(_context);
 
             List<Competition> competitions = _repo.competitions;
 
@@ -21,8 +23,10 @@ namespace ASPNETCore.Hubs
 
             foreach (var c in competitions)
             {
-                competitionsDT.Add(new CompetitionDT(c));
+                competitionsDT.Add(ToDTModelsParsers.DTCompetitionParser(c));
             }
+
+
 
             await Clients.Caller.SendAsync("Send", competitionsDT);
 
@@ -31,7 +35,7 @@ namespace ASPNETCore.Hubs
 
         }
 
-        public async void AddCompetition(CompetitionDT competitionDT)
+        public async Task AddNewCompetition(CompetitionDT competitionDT)
         {
             string res = "failed";
 
@@ -39,12 +43,15 @@ namespace ASPNETCore.Hubs
 
             if (competition != null)
             {
-                _context.Competitions.Add(competition);
+
+                CompetitionRepository _repo = new CompetitionRepository(_context);
+                _repo.addCompetiton(competition);
                 res = "success";
             }
 
-            
+
             await Clients.Caller.SendAsync("Add", res);
         }
     }
+
 }

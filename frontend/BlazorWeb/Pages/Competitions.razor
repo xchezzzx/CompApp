@@ -44,7 +44,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in users)
+                @foreach (var item in users)
             {
                 <tr>
                     <td>@item.Id</td>
@@ -67,7 +67,7 @@ else
 
 <div class="row">
     <div class="col text-center">
-        <button class="btn btn-success" @onclick="fetchData">
+            <button class="btn btn-success" @onclick="fetchData">
                 <span class="oi oi-loop-circular" aria-hidden="true"></span>
                 <span>&nbsp;Refresh List</span>
         </button>
@@ -75,36 +75,45 @@ else
 </div>
 }
 
+
 @code {
     //[Parameter]
     //public string Message { get; set; }
-    //string message;
-    List<CompetitionDT> users;
+    string messageFromServer = String.Empty;
     bool flag = false;
+    List<CompetitionDT> users = new List<CompetitionDT>();
+
 
     protected override async Task OnInitializedAsync()
     {
-        await fetchData();
+        if (flag == false) await fetchData();
     }
 
-	public async Task fetchData()
-	{
+    public async Task fetchData()
+    {
         flag = false;
 
-		HubConnection connection = new HubConnectionBuilder()
-				.WithUrl("https://localhost:7206/competitions")
-				.WithAutomaticReconnect()
-				.Build();
+        HubConnection connection = new HubConnectionBuilder()
+                .WithUrl("https://localhost:7206/competitions")
+                .WithAutomaticReconnect()
+                .Build();
 
         connection.On<List<CompetitionDT>>("Send", msg =>
-		{
-			users = msg;
-			flag = true;
-		});
-		await connection.StartAsync();
+        {
+            users = msg;
+            flag = true;
+        });
+
+
+        await connection.StartAsync();
 
         await connection.InvokeAsync("SendCompetitions");
 
+
         await connection.DisposeAsync();
-	}
+    }
+
+    
+
+    
 }
