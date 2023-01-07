@@ -1,4 +1,6 @@
 ﻿@page "/competitions/add"
+@using BlazorWeb.Models.DataTransferModels;
+@using Microsoft.AspNetCore.SignalR.Client;
 
 <div>
 	<div class="row mb-5">
@@ -112,16 +114,18 @@
 
 					@*submit button*@
 
-					<div class="row mb-4">
-						<div class="col-sm-4 offset-4">
-							<button type="submit" class="btn btn-primary" @onclick="sendNewCompetition">Add competition</button>
-						</div>
-					</div>
+					
 
 					@*					<label for="submitBtn" class="col-sm-3 col-form-label">Add competition</label>
 				<input type="submit" id="submitBtn" class="btn btn-primary text-end" />
 				*@
 				</form>
+
+				<div class="row mb-4">
+					<div class="col-sm-4 offset-4">
+						<button type="submit" class="btn btn-primary" @onclick="sendNewCompetition">Add competition</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	}
@@ -186,7 +190,6 @@
 		newCompetitionNumberConcTasks = 1;
 		newCompetitionHashtag = string.Empty;
 
-		await sendNewCompetition();
 
 	}
 
@@ -221,7 +224,7 @@
 			});
 
 			await connection.StartAsync();
-			await connection.InvokeAsync("AddCompetition", newCompetition);
+			await connection.InvokeAsync("AddNewCompetition", newCompetition);
 			await connection.DisposeAsync();
 	}
 }
