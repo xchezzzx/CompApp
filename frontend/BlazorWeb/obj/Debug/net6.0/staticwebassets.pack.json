@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\favicon.ico_",
+      "PackagePath": "staticwebassets\\favicon.ico_"
+    },
+    {
       "Id": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ec4dRLf/QSsxbEp8PCZSKLgTm3VQK1nBFjvitrNy0FY=",
+  "Hash": "TvQN9fIYqwEcRvpn/NbRekG/lrnFen4T1GjBcseE8dU=",
   "Source": "BlazorWeb",
   "BasePath": "/",
   "Mode": "Root",
@@ -7325,6 +7325,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\favicon.ico_",
+      "SourceId": "BlazorWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "favicon.ico_",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico_"
     },
     {
       "Identity": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\icon-192.png",
