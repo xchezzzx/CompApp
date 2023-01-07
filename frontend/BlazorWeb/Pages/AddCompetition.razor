@@ -114,28 +114,18 @@
 
 					@*submit button*@
 
-<<<<<<< HEAD
 					<div class="row mb-4">
 						<div class="col-sm-6 offset-3">
 							<button type="submit" class="btn btn-primary" @onclick="sendNewCompetition">Add competition</button>
-							<button type="button" class="btn btn-info" @onclick="AddNewCompetition">Print</button>
-							<button type="reset" class="btn btn-danger">Clear fields</button>
+@*							<button type="button" class="btn btn-info" @onclick="AddNewCompetition">Print</button>
+*@							<button type="reset" class="btn btn-danger">Clear fields</button>
 						</div>
 					</div>
-=======
-					
->>>>>>> 9f62c54da8630e5b3367a14b15dad1b4ce5cc5ac
 
-					@*					<label for="submitBtn" class="col-sm-3 col-form-label">Add competition</label>
+				@*<label for="submitBtn" class="col-sm-3 col-form-label">Add competition</label>
 				<input type="submit" id="submitBtn" class="btn btn-primary text-end" />
 				*@
 				</form>
-
-				<div class="row mb-4">
-					<div class="col-sm-4 offset-4">
-						<button type="submit" class="btn btn-primary" @onclick="sendNewCompetition">Add competition</button>
-					</div>
-				</div>
 			</div>
 		</div>
 	}
@@ -145,14 +135,7 @@
 	}
 </div>
 
-<div class="row">
-	<div class="col-6">
-		<button class="btn btn-primary" @onclick="sendNewCompetition">Add competition</button>
-
-	</div>
-</div>
-
-<div class="row">
+@*<div class="row">
 	<div class="col-9">
 		@if (newCompetition != null)
 		{
@@ -186,7 +169,7 @@
 		}
 
 	</div>
-</div>
+</div>*@
 
 @code {
 
@@ -214,13 +197,8 @@
 		newCompetitionDuration = newCompetitionEndTime - newCompetitionStartTime;
 		newCompetitionDurationInt = newCompetitionDuration.Hours;
 		newCompetitionNumberConcTasks = 1;
-<<<<<<< HEAD
 		newCompetitionHashtag = "fuckdotnet";
-=======
 		newCompetitionHashtag = string.Empty;
-
-
->>>>>>> 9f62c54da8630e5b3367a14b15dad1b4ce5cc5ac
 	}
 
 
@@ -260,14 +238,8 @@
 			flag = true;
 		});
 
-<<<<<<< HEAD
 		await connection.StartAsync();
-		await connection.InvokeAsync("AddCompetition", newCompetition);
+		await connection.InvokeAsync("AddNewCompetition", newCompetition);
 		await connection.DisposeAsync();
-=======
-			await connection.StartAsync();
-			await connection.InvokeAsync("AddNewCompetition", newCompetition);
-			await connection.DisposeAsync();
->>>>>>> 9f62c54da8630e5b3367a14b15dad1b4ce5cc5ac
 	}
 }
