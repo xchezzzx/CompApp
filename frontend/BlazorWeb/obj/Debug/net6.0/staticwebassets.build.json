@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "Hash": "TvQN9fIYqwEcRvpn/NbRekG/lrnFen4T1GjBcseE8dU=",
+=======
   "Hash": "GA4jD5sX+KEYVYlS72afmjPFaD3CyUsgU2g7gcwJ/kU=",
+>>>>>>> 9f62c54da8630e5b3367a14b15dad1b4ce5cc5ac
   "Source": "BlazorWeb",
   "BasePath": "/",
   "Mode": "Root",
@@ -7327,7 +7331,28 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
+      "Identity": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\favicon.ico_",
+      "SourceId": "BlazorWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "favicon.ico_",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico_"
+    },
+    {
+      "Identity": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\icon-192.png",
+=======
       "Identity": "C:\\CCMS\\frontend\\BlazorWeb\\wwwroot\\icon-192.png",
+>>>>>>> 9f62c54da8630e5b3367a14b15dad1b4ce5cc5ac
       "SourceId": "BlazorWeb",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\CCMS\\frontend\\BlazorWeb\\wwwroot\\",
