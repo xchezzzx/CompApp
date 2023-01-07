@@ -9,45 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = BlazorWeb
 build_property.RootNamespace = BlazorWeb
-build_property.ProjectDir = C:\CCMS\frontend\BlazorWeb\
+build_property.ProjectDir = D:\sources\CompApp\frontend\BlazorWeb\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\CCMS\frontend\BlazorWeb
+build_property.MSBuildProjectDirectory = D:\sources\CompApp\frontend\BlazorWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/CCMS/frontend/BlazorWeb/App.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CCMS/frontend/BlazorWeb/Pages/AddCompetition.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/Pages/AddCompetition.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ29tcGV0aXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CCMS/frontend/BlazorWeb/Pages/Competitions.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/Pages/Competitions.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcGV0aXRpb25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CCMS/frontend/BlazorWeb/Pages/Counter.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CCMS/frontend/BlazorWeb/Pages/Index.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CCMS/frontend/BlazorWeb/Shared/SurveyPrompt.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CCMS/frontend/BlazorWeb/_Imports.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/CCMS/frontend/BlazorWeb/Shared/MainLayout.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-nlkmzi3am4
 
-[C:/CCMS/frontend/BlazorWeb/Shared/NavMenu.razor]
+[D:/sources/CompApp/frontend/BlazorWeb/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-fto0rlx2or
