@@ -549,3 +549,4 @@ D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ASPNETCore.pdb
 D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ASPNETCore.genruntimeconfig.cache
 D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ref\ASPNETCore.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\CCMS\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

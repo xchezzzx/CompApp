@@ -87,11 +87,11 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        if (flag == false) await fetchData();
+         await fetchData();
     }
 
     public async Task fetchData()
     {
-        await CompetitionService.GetAllCompetitionsAsync();
+        users = await CompetitionService.GetAllCompetitionsAsync();
     }
 }
