@@ -9,15 +9,15 @@
 
 <div class="row">
     <div class="col-10 text-center align-content-center">
-	    <h1>Competitions</h1>
+        <h1>Competitions</h1>
     </div>
     <div class="col-2 text-end">
-    <a  class="btn btn-primary"
-        href="/competitions/add"
-        role="button">
-		<span class="oi oi-plus" aria-hidden="true"></span>
-		<span>&nbsp;Add competiton</span>
-    </a>
+        <a class="btn btn-primary"
+           href="/competitions/add"
+           role="button">
+            <span class="oi oi-plus" aria-hidden="true"></span>
+            <span>&nbsp;Add competiton</span>
+        </a>
     </div>
 </div>
 
@@ -26,55 +26,55 @@
 @if (users == null)
 {
     <div class="text-center">
-        <img src="./images/loading-waiting.gif"/>
+        <img src="./images/loading-waiting.gif" />
     </div>
 }
 else
 {
-<div class="table-responsive">
+    <div class="table-responsive">
         <table class="table table-striped text-center table-hover">
-        <thead class="table-light">
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Date of competition</th>
-				<th>Start Time</th>
-                <th>End Time</th>
-				<th>Duration</th>
-                <th>Number of Concurrent Tasks</th>
-                <th>Event Twitter Hashtag</th>
-            </tr>
-        </thead>
-        <tbody>
-                @foreach (var item in users)
-            {
+            <thead class="table-light">
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Name</td>
-                    <td>@item.StartDateTime.ToLongDateString()</td>
-					<td>@item.StartDateTime.ToString("t")</td>
-                    <td>@item.EndDateTime.ToString("t")</td>
-					<td>@item.Duration.ToString("%h") hour(s)</td>
-                    <td>@item.NumberConcTasks</td>
-                    <td>
-                        <a href="https://twitter.com/search?q=@item.Hashtag&src=trend_click&vertical=trends" target="_blank">
-                            #@item.Hashtag
-                        </a>
-                    </td>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date of competition</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Duration</th>
+                    <th>Number of Concurrent Tasks</th>
+                    <th>Event Twitter Hashtag</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                @foreach (var item in users)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.StartDateTime.ToLongDateString()</td>
+                        <td>@item.StartDateTime.ToString("t")</td>
+                        <td>@item.EndDateTime.ToString("t")</td>
+                        <td>@item.Duration.ToString("%h") hour(s)</td>
+                        <td>@item.NumberConcTasks</td>
+                        <td>
+                            <a href="https://twitter.com/search?q=@item.Hashtag&src=trend_click&vertical=trends" target="_blank">
+                                #@item.Hashtag
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
-<div class="row">
-    <div class="col text-center">
+    <div class="row">
+        <div class="col text-center">
             <button class="btn btn-success" @onclick="fetchData">
                 <span class="oi oi-loop-circular" aria-hidden="true"></span>
                 <span>&nbsp;Refresh List</span>
-        </button>
+            </button>
+        </div>
     </div>
-</div>
 }
 
 
@@ -87,16 +87,11 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        users = await CompetitionService.GetAllCompetitionsAsync();
-        
+        if (flag == false) await fetchData();
     }
 
     public async Task fetchData()
     {
         await CompetitionService.GetAllCompetitionsAsync();
     }
-
-    
-
-    
 }

@@ -14,8 +14,10 @@ builder.Services.AddSingleton<ICompetitionService, CompetitionService>();
 
 var app = builder.Build();
 
-//var service = app.Services.GetRequiredService<ICompetitionService>();
+builder.Services.AddOidcAuthentication(options =>
+	{
+		builder.Configuration.Bind("Auth0", options.ProviderOptions);
+		options.ProviderOptions.ResponseType = "code";
+	});
 
-//await service.InitializeAsync();
-
-await app.RunAsync();
+await builder.Build().RunAsync();

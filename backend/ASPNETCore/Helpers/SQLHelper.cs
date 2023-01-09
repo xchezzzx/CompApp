@@ -27,10 +27,10 @@ namespace ASPNETCore.Helpers
 
     //        context.Competitions.Add(competition);
 
-    //        context.SaveChanges();
-    //    }
+            context.SaveChanges();
+        }
 
-    //    public static Dictionary<int, Competition> _competition;
+        public static Dictionary<int, Competition> _competition;
 
     //    public static Dictionary<int, CompetitionState> _competitionStatus;
 
