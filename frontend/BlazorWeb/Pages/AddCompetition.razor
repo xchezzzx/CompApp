@@ -93,7 +93,25 @@
 							</select>
 							<div id="emailHelp" class="form-text">Choose amount of concurrent tasks</div>
 						</div>
-						@*<input type="range" class="form-range" min="1" max="6" step="1" id="customRange3">*@
+@*						<input type="range" class="form-range" min="1" max="6" step="0.25" id="customRange3">
+*@					</div>
+
+					<div class="row mb-4">
+						<label for="inputHashtag" class="col-sm-3 col-form-label">Concurrent tasks slider</label>
+						<div class="col-sm-9">
+							<div class="input-group">
+@*								<span class="input-group-text">№</span>
+*@								<input type="range"
+								   class="form-range"
+								   id="inputHashtag"
+								   min="1"
+								   max="5"
+								   step="1"
+									@bind-value="newCompetitionNumberConcTasks">
+
+							</div>
+							<div id="HashtagHelp" class="form-text">Choose amount of concurrent tasks</div>
+						</div>
 					</div>
 
 					<div class="row mb-4">
@@ -116,8 +134,8 @@
 					<div class="row mb-4">
 						<div class="col-sm-6 offset-3">
 							<button type="submit" class="btn btn-primary" @onclick="sendNewCompetition">Add competition</button>
-							<button type="button" class="btn btn-info" @onclick="AddNewCompetition">Print</button>
-							<button type="reset" class="btn btn-danger">Clear fields</button>
+@*							<button type="button" class="btn btn-info" @onclick="AddNewCompetition">Print</button>
+*@							<button type="reset" class="btn btn-danger">Clear fields</button>
 						</div>
 					</div>
 
@@ -126,12 +144,12 @@
 				*@
 				</form>
 
-				<div class="row mb-4">
+@*				<div class="row mb-4">
 					<div class="col-sm-4 offset-4">
 						<button type="submit" class="btn btn-primary" @onclick="sendNewCompetition">Add competition</button>
 					</div>
 				</div>
-			</div>
+*@			</div>
 		</div>
 	}
 	else
@@ -140,14 +158,14 @@
 	}
 </div>
 
-<div class="row">
+@*<div class="row">
 	<div class="col-6">
 		<button class="btn btn-primary" @onclick="sendNewCompetition">Add competition</button>
 
 	</div>
-</div>
+</div>*@
 
-<div class="row">
+@*<div class="row">
 	<div class="col-9">
 		@if (newCompetition != null)
 		{
@@ -181,7 +199,7 @@
 		}
 
 	</div>
-</div>
+</div>*@
 
 @code {
 

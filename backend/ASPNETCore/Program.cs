@@ -4,10 +4,22 @@ using ASPNETCore.Models.DBModels;
 using ASPNETCore.Repositories;
 using ASPNETCore.Helpers;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+	.AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, c =>
+	{
+		c.Authority = $"https://{builder.Configuration["Auth0:Domain"]}";
+		c.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+		{
+			ValidAudience = builder.Configuration["Auth0:Audience"],
+			ValidIssuer = $"https://{builder.Configuration["Auth0:Domain"]}"
+		};
+	});
 
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
@@ -59,6 +71,7 @@ app.UseCors("policy");
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
