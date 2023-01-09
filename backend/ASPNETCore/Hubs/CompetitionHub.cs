@@ -3,17 +3,25 @@ using ASPNETCore.Models.DTModels;
 using ASPNETCore.Models.DBModels;
 using ASPNETCore.Repositories;
 using Microsoft.AspNetCore.SignalR;
+using ASPNETCore.Interfaces;
 
 namespace ASPNETCore.Hubs
 {
     public class CompetitionHub : Hub
     {
-        private CCMSContext _context = new CCMSContext();
-        
+        //private CCMSContext _context;
+
+        private readonly ICompetition competitionRepository;
+
+        public CompetitionHub(ICompetition iCompetiton)
+        {
+
+            competitionRepository = iCompetiton;
+        }
 
         public async Task SendCompetitions()
         {
-
+            CCMSContext _context = new();
 
             CompetitionRepository _repo = new CompetitionRepository(_context);
 
@@ -26,13 +34,7 @@ namespace ASPNETCore.Hubs
                 competitionsDT.Add(ToDTModelsParsers.DTCompetitionParser(c));
             }
 
-
-
-            await Clients.Caller.SendAsync("Send", competitionsDT);
-
-
-
-
+            await Clients.All.SendAsync("Send", competitionsDT);
         }
 
         public async Task AddNewCompetition(CompetitionDT competitionDT)
@@ -44,8 +46,8 @@ namespace ASPNETCore.Hubs
             if (competition != null)
             {
 
-                CompetitionRepository _repo = new CompetitionRepository(_context);
-                _repo.addCompetiton(competition);
+                //CompetitionRepository _repo = new CompetitionRepository(_context);
+                competitionRepository.addCompetiton(competition);
                 res = "success";
             }
 

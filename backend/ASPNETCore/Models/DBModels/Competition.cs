@@ -1,27 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASPNETCore.Models.DBModels
 {
     public partial class Competition
     {
-        public int Id { get; set; }
+        public Competition()
+        {
+            CompetitionsToTeams = new HashSet<CompetitionsToTeam>();
+            CompetitionsToTeamsToTasks = new HashSet<CompetitionsToTeamsToTask>();
+            CompetitionsToTeamsToUsers = new HashSet<CompetitionsToTeamsToUser>();
+            CompetitionsToUsers = new HashSet<CompetitionsToUser>();
+        }
 
-        public string CompetitionName { get; set; } = null!;
+        public int Id { get; set; }
+        public string Name { get; set; } = null!;
         public TimeSpan Duration { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public DateTime StartDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
         public int NumberConcTasks { get; set; }
         public string Hashtag { get; set; } = null!;
-        public DateTime DateCreate { get; set; }
-        public DateTime DateUpdate { get; set; }
-        public int UserCreateId { get; set; }
-        public int UserUpdateId { get; set; }
+        public int StateId { get; set; }
+        public DateTime CreateDate { get; set; }
+        public int CreateUserId { get; set; }
+        public DateTime UpdateDate { get; set; }
+        public int UpdateUserId { get; set; }
         public int StatusId { get; set; }
 
-        public virtual CompetitionStatus Status { get; set; } = null!;
-        //public virtual User UserCreate { get; set; } = null!;
-        //public virtual User UserUpdate { get; set; } = null!;
+        public virtual User CreateUser { get; set; } = null!;
+        public virtual CompetitionState State { get; set; } = null!;
+        public virtual Status Status { get; set; } = null!;
+        public virtual User UpdateUser { get; set; } = null!;
+        public virtual ICollection<CompetitionsToTeam> CompetitionsToTeams { get; set; }
+        public virtual ICollection<CompetitionsToTeamsToTask> CompetitionsToTeamsToTasks { get; set; }
+        public virtual ICollection<CompetitionsToTeamsToUser> CompetitionsToTeamsToUsers { get; set; }
+        public virtual ICollection<CompetitionsToUser> CompetitionsToUsers { get; set; }
     }
 }

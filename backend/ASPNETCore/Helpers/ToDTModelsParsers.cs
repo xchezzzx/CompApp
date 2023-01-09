@@ -11,10 +11,10 @@ namespace ASPNETCore.Helpers
             return new CompetitionDT()
             {
                 Id = competition.Id,
-                CompetitionName = competition.CompetitionName,
-                StartTime = competition.StartTime,
+                Name = competition.Name,
                 Duration = competition.Duration,
-                EndTime = competition.EndTime,
+                EndDateTime = competition.EndDateTime,
+                StartDateTime = competition.StartDateTime,
                 NumberConcTasks = competition.NumberConcTasks,
                 Hashtag = competition.Hashtag,
             };

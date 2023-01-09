@@ -2,18 +2,14 @@
 {
     public class CompetitionDT
     {
-
         public int? Id { get; set; }
-        public string CompetitionName { get; set; } = null!;
+        public string Name { get; set; } = null!;
         public TimeSpan Duration { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public DateTime StartDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
         public int NumberConcTasks { get; set; }
         public string Hashtag { get; set; } = null!;
-
-        public CompetitionDT()
-        {
-        }
-
+        public string State { get; set; }
+        public string Status { get; set; }
     }
 }

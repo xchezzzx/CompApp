@@ -29,7 +29,7 @@ namespace ASPNETCore.Repositories
         //    UserUpdateId = 1
         //};
 
-        public List<Competition> competitions => _modelsContext.Competitions.Include(c => c.Status).ToList();
+        public List<Competition> competitions => _modelsContext.Competitions.Include(c => c.Status).Include(c => c.State).ToList();
 
         public void addCompetiton(Competition competition) { _modelsContext.Competitions.Add(competition); _modelsContext.SaveChanges(); }
 

@@ -10,19 +10,16 @@ namespace ASPNETCore.Helpers
 
             return new Competition()
             {
-                CompetitionName = competitionDT.CompetitionName,
-                StartTime = competitionDT.StartTime,
+                Name = competitionDT.Name,
                 Duration = competitionDT.Duration,
-                EndTime = competitionDT.EndTime,
+                StartDateTime = competitionDT.StartDateTime,
+                EndDateTime = competitionDT.EndDateTime,
                 NumberConcTasks = competitionDT.NumberConcTasks,
                 Hashtag = competitionDT.Hashtag,
-                DateCreate = DateTime.Now,
-                DateUpdate = DateTime.Now,
-                UserCreateId = 1,
-                UserUpdateId = 1,
+                StateId = 1,
                 StatusId = 1
-            };
 
+            };
         }
     }
 }

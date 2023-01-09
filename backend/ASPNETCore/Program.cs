@@ -21,8 +21,7 @@ string DB_CONNECTION_STRING =
     "MultipleActiveResultSets=False;" +
     "Encrypt=True;" +
     "TrustServerCertificate=False;" +
-    "Connection Timeout=30;" +
-    "Encrypt=False";
+    "Connection Timeout=30;";
 
 builder.Services.AddDbContext<CCMSContext>(options => options.UseSqlServer(DB_CONNECTION_STRING));
 
