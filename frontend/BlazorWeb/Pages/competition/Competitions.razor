@@ -1,4 +1,6 @@
 ﻿@page "/competitions"
+@attribute [Authorize]
+
 @using BlazorWeb.Interfaces;
 @using BlazorWeb.Models.DataTransferModels;
 @using BlazorWeb.Services;
@@ -23,7 +25,7 @@
 
 
 
-@if (users == null)
+@if (!dataFetched)
 {
     <div class="text-center">
         <img src="./images/loading-waiting.gif" />
@@ -41,26 +43,28 @@ else
                     <th>Start Time</th>
                     <th>End Time</th>
                     <th>Duration</th>
-                    <th>Number of Concurrent Tasks</th>
-                    <th>Event Twitter Hashtag</th>
+                    <th>Concurrent Tasks</th>
+                    <th>Twitter Hashtag</th>
+                    <th>State</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in users)
+                @foreach (var comp in competitions)
                 {
                     <tr>
-                        <td>@item.Id</td>
-                        <td>@item.Name</td>
-                        <td>@item.StartDateTime.ToLongDateString()</td>
-                        <td>@item.StartDateTime.ToString("t")</td>
-                        <td>@item.EndDateTime.ToString("t")</td>
-                        <td>@item.Duration.ToString("%h") hour(s)</td>
-                        <td>@item.NumberConcTasks</td>
+                        <td>@comp.Id</td>
+                        <td>@comp.Name</td>
+                        <td>@comp.StartDateTime.ToLongDateString()</td>
+                        <td>@comp.StartDateTime.ToString("t")</td>
+                        <td>@comp.EndDateTime.ToString("t")</td>
+                        <td>@comp.Duration.ToString("%h") hour(s)</td>
+                        <td>@comp.NumberConcTasks</td>
                         <td>
-                            <a href="https://twitter.com/search?q=@item.Hashtag&src=trend_click&vertical=trends" target="_blank">
-                                #@item.Hashtag
+                            <a href="https://twitter.com/search?q=@comp.Hashtag&src=trend_click&vertical=trends" target="_blank">
+                                #@comp.Hashtag
                             </a>
                         </td>
+                        <td>@comp.State</td>
                     </tr>
                 }
             </tbody>
@@ -82,16 +86,19 @@ else
     //[Parameter]
     //public string Message { get; set; }
     string messageFromServer = String.Empty;
-    List<CompetitionDT> users = new List<CompetitionDT>();
+    bool dataFetched;
+    List<CompetitionDT> competitions = new List<CompetitionDT>();
 
 
     protected override async Task OnInitializedAsync()
     {
-         await fetchData();
+        dataFetched = false;
+        await fetchData();
     }
 
     public async Task fetchData()
     {
-        users = await CompetitionService.GetAllCompetitionsAsync();
+        competitions = await CompetitionService.GetAllCompetitionsAsync();
+        dataFetched = true;
     }
 }

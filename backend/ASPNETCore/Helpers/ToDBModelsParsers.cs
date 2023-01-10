@@ -17,6 +17,10 @@ namespace ASPNETCore.Helpers
                 NumberConcTasks = competitionDT.NumberConcTasks,
                 Hashtag = competitionDT.Hashtag,
                 StateId = 1,
+                CreateDate = DateTime.Now,
+                CreateUserId = 1,
+                UpdateDate= DateTime.Now,
+                UpdateUserId = 1,
                 StatusId = 1
 
             };
