@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/sources/CompApp/frontend/BlazorWeb/Pages/team/Teams.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdGVhbVxUZWFtcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/sources/CompApp/frontend/BlazorWeb/Pages/user/AddUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxBZGRVc2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

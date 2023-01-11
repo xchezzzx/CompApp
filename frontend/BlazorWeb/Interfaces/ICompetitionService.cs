@@ -5,6 +5,10 @@ namespace BlazorWeb.Interfaces
     public interface ICompetitionService
     {
         Task<List<CompetitionDT>> GetAllCompetitionsAsync();
-        Task AddCompetition(CompetitionDT competitionDT);
+        //Task<CompetitionDT> GetCompetitionByIdAsync(int id);
+        //Task AddCompetitionAsync(CompetitionDT competitionDT);
+        //Task UpdateCompetitionAsync(CompetitionDT competitionDT);
+        //Task DeleteCompetitionAsync(int id);
+        
     }
 }
