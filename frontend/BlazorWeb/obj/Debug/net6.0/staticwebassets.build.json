@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2wVTZOd/Tu5X1JhL3y9k2uv/U+h29cS4vaUOu0O0/zw=",
+  "Hash": "7LJuTfc9k5zbJ5rzfuX1nSPyuhta45r0cdFhNLQouxE=",
   "Source": "BlazorWeb",
   "BasePath": "/",
   "Mode": "Root",
@@ -7461,6 +7461,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icon-192.png"
+    },
+    {
+      "Identity": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\images\\empty.gif",
+      "SourceId": "BlazorWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/empty.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\empty.gif"
     },
     {
       "Identity": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\images\\loader.gif",

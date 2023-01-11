@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\images\\NotAuth.jpg"
     },
     {
+      "Id": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\images\\empty.gif",
+      "PackagePath": "staticwebassets\\images\\empty.gif"
+    },
+    {
       "Id": "D:\\sources\\CompApp\\frontend\\BlazorWeb\\wwwroot\\images\\loader.gif",
       "PackagePath": "staticwebassets\\images\\loader.gif"
     },

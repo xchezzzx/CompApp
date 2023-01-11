@@ -30,6 +30,7 @@
 }
 else
 {
+
 	<div class="table-responsive">
 		<table class="table table-striped text-center table-hover">
 			<thead class="table-light">
@@ -42,18 +43,43 @@ else
 					<th>Sum of points</th>
 				</tr>
 			</thead>
+
 			<tbody>
-				@foreach (var user in users)
+
+				@if (users.Count == 0)
 				{
 					<tr>
-						<td>@user.Id</td>
-						<td>@user.FirstName</td>
-						<td>@user.LastName</td>
-						<td>@user.Email</td>
-						<td>@user.RoleId</td>
-						<td>@user.PointsSummary</td>
+						<td colspan="6">
+							<div class="text-center">
+								Sorry, the list is empty
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<div class ="text-center">
+								<img src="./images/empty.gif" height="200" />
+							</div>
+
+						</td>
 					</tr>
 				}
+				else
+				{
+					@foreach (var user in users)
+					{
+						<tr>
+							<td>@user.Id</td>
+							<td>@user.FirstName</td>
+							<td>@user.LastName</td>
+							<td>@user.Email</td>
+							<td>@user.RoleId</td>
+							<td>@user.PointsSummary</td>
+						</tr>
+
+					}
+				}
+
 			</tbody>
 		</table>
 	</div>
@@ -92,7 +118,6 @@ else
 	{
 		Console.WriteLine("Fetching data...");
 
-		System.Threading.Thread.Sleep(5000);
 		_dataFetched = true;
 		//users = await CompetitionService.GetAllCompetitionsAsync();
 	}
