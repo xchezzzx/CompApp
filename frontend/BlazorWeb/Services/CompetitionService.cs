@@ -18,6 +18,7 @@ namespace BlazorWeb.Services
         }
 
         private List<CompetitionDT> _getAllCompetitions { get; set; }
+        private CompetitionDT getCompetition { get; set; }
 
         public async Task<List<CompetitionDT>> GetAllCompetitionsAsync()
         {
