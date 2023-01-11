@@ -1,10 +1,11 @@
-﻿using ASPNETCore.Interfaces;
+﻿using ASPNETCore.Helpers;
+using ASPNETCore.Interfaces;
 using ASPNETCore.Models.DBModels;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASPNETCore.Repositories
 {
-    public class CompetitionRepository : ICompetition
+    public class CompetitionRepository : ICompetitionsToTeamsToUser
     {
         private readonly CCMSContext _modelsContext;
 
@@ -13,28 +14,42 @@ namespace ASPNETCore.Repositories
             _modelsContext = modelsContext;
         }
 
-        //Competition competition = new Competition()
-        //{
-        //    CompetitionName = "CompetitionName",
-        //    DateCreate = DateTime.Now,
-        //    DateUpdate = DateTime.Now,
-        //    EndTime = DateTime.Now.AddDays(1),
-        //    StartTime = DateTime.Now,
-        //    Duration = DateTime.Now.AddDays(1) - DateTime.Now,
-        //    Hashtag = "Hashtag",
-        //    NumberConcTasks = 3,
-        //    //Status= comps[0].Status,
-        //    StatusId = 1,
-        //    UserCreateId = 1,
-        //    UserUpdateId = 1
-        //};
 
-        public List<Competition> competitions => _modelsContext.Competitions.Include(c => c.Status).Include(c => c.State).ToList();
+        public List<Competition> GetAllCompetitions => 
+            _modelsContext.Competitions
+            .Include("State")
+            .Include("Status")
+            .ToList();
 
-        public void addCompetiton(Competition competition) 
-        { 
-            _modelsContext.Competitions.Add(competition); 
-            _modelsContext.SaveChanges(); 
+        public Competition GetCompetitionById(int id) =>
+           (_modelsContext.Competitions
+            .Include(c => c.State)
+            .Include(c => c.Status)
+            .Include(c => c.CreateUser)
+            .Include(c => c.UpdateUser)
+            .Where(c => c.Id == id)
+            .FirstOrDefault());
+
+        public void AddNewCompetiton(Competition competition, int createUserID)
+        {
+            FillEntityHelper.CreateEntity(ref competition, createUserID);
+            _modelsContext.Competitions.Add(competition);
+            _modelsContext.SaveChanges();
+            //return true;
+        }
+
+        public void UpdeteCompetiton(Competition competition, int updateUserID)
+        {
+            FillEntityHelper.UpdateEntity(ref competition, updateUserID);
+            _modelsContext.Competitions.Update(competition);
+            _modelsContext.SaveChanges();
+        }
+
+        public void DeleteCompetiton(Competition competition, int updateUserID)
+        {
+            FillEntityHelper.DeleteEntity(ref competition, updateUserID);
+            _modelsContext.Competitions.Update(competition);
+            _modelsContext.SaveChanges();
         }
     }
 }

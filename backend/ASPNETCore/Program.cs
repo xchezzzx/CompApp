@@ -5,6 +5,8 @@ using ASPNETCore.Repositories;
 using ASPNETCore.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,7 +41,18 @@ builder.Services.AddDbContext<CCMSContext>(options => options.UseSqlServer(DB_CO
 
 builder.Services.AddCors(c => c.AddPolicy("policy", a => a.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
-builder.Services.AddTransient<ICompetition, CompetitionRepository>();
+builder.Services.AddTransient<ICompetitionsToTeamsToUser, CompetitionRepository>();
+builder.Services.AddTransient<IGeneric<Competition>, GenericRepository<Competition>>();
+builder.Services.AddTransient<IGeneric<User>, GenericRepository<User>>();
+
+builder.Services.AddControllers()
+        .AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        });
+
+
+
 
 
 
@@ -75,6 +88,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapHub<CompetitionHub>("/competitions");
+app.MapHub<CompetitionHub<Competition>>("/competitions");
+app.MapHub<CompetitionHub<User>>("/users");
 
 app.Run();

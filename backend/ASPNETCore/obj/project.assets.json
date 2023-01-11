@@ -45,19 +45,6 @@
           }
         }
       },
-      "JSON/1.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Json.dll": {
-            "related": ".pdb"
-          }
-        },
-        "runtime": {
-          "lib/net40/Json.dll": {
-            "related": ".pdb"
-          }
-        }
-      },
       "MessagePack/2.1.152": {
         "type": "package",
         "dependencies": {
@@ -3755,28 +3742,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "JSON/1.0.1": {
-      "sha512": "n387Xh1oDWolCIVb2oMV1bWkEKBBk5iLkMuaiAQuLUaAZwowyym2s/6b/hFnmS5J3bzINmZ7I2WEbBAZMQd2dg==",
-      "type": "package",
-      "path": "json/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "json.1.0.1.nupkg.sha512",
-        "json.nuspec",
-        "lib/net35/Json.Net35.dll",
-        "lib/net35/Json.Net35.pdb",
-        "lib/net40/Json.dll",
-        "lib/net40/Json.pdb",
-        "lib/sl3/Json.Silverlight.dll",
-        "lib/sl3/Json.Silverlight.pdb",
-        "lib/sl4/Json.Silverlight4.dll",
-        "lib/sl4/Json.Silverlight4.pdb",
-        "lib/wp/Json.WindowsPhone.dll",
-        "lib/wp/Json.WindowsPhone.pdb"
       ]
     },
     "MessagePack/2.1.152": {
@@ -10531,7 +10496,6 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "EntityFramework >= 6.4.4",
-      "JSON >= 1.0.1",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.12",
       "Microsoft.EntityFrameworkCore >= 6.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.12",
@@ -10588,10 +10552,6 @@
             "target": "Package",
             "version": "[6.4.4, )"
           },
-          "JSON": {
-            "target": "Package",
-            "version": "[1.0.1, )"
-          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.12, )"
@@ -10637,17 +10597,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Пакет \"JSON 1.0.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "libraryId": "JSON",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

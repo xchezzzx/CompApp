@@ -7,25 +7,19 @@ using ASPNETCore.Interfaces;
 
 namespace ASPNETCore.Hubs
 {
-    public class CompetitionHub : Hub
+    public class CompetitionHub: Hub
     {
-        //private CCMSContext _context;
 
-        private readonly ICompetition competitionRepository;
+        private readonly ICompetitionsToTeamsToUser _competitionRepository;
 
-        public CompetitionHub(ICompetition iCompetiton)
+        public CompetitionHub(ICompetitionsToTeamsToUser iCompetiton)
         {
-
-            competitionRepository = iCompetiton;
+            _competitionRepository = iCompetiton;
         }
 
-        public async Task SendCompetitions()
+        public async Task GetAllCompetitions()
         {
-            CCMSContext _context = new();
-
-            CompetitionRepository _repo = new CompetitionRepository(_context);
-
-            List<Competition> competitions = _repo.competitions;
+            List<Competition> competitions = _competitionRepository.GetAllCompetitions;
 
             List<CompetitionDT> competitionsDT = new();
 
@@ -34,7 +28,22 @@ namespace ASPNETCore.Hubs
                 competitionsDT.Add(ToDTModelsParsers.DTCompetitionParser(c));
             }
 
-            await Clients.All.SendAsync("Send", competitionsDT);
+            await Clients.All.SendAsync("Get", competitionsDT);
+        }
+
+
+        public async Task GetCompetitionById()
+        {
+            Competition competitions = _competitionRepository.GetAllCompetitions;
+
+            List<CompetitionDT> competitionsDT = new();
+
+            foreach (var c in competitions)
+            {
+                competitionsDT.Add(ToDTModelsParsers.DTCompetitionParser(c));
+            }
+
+            await Clients.All.SendAsync("Get", competitionsDT);
         }
 
         public async Task AddNewCompetition(CompetitionDT competitionDT)
@@ -42,18 +51,18 @@ namespace ASPNETCore.Hubs
             string res = "failed";
 
             Competition competition = ToDBModelsParsers.CompetitionParser(competitionDT);
+            FillEntityHelper.CreateEntity(ref competition, 1);
 
             if (competition != null)
             {
-
-                //CompetitionRepository _repo = new CompetitionRepository(_context);
-                competitionRepository.addCompetiton(competition);
+                _competitionRepository.AddCompetiton(competition);
                 res = "success";
             }
 
-
             await Clients.Caller.SendAsync("Add", res);
         }
+
+        
     }
 
 }

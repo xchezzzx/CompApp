@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NVJoOsEBkWxU4dlZzhUx5ec+/fDAI1Ri+UADM4SqfAD4Qn2ypmm6xZqJnfX5zM9fVBmpJ9cbju9dTWEp/5pgKg==",
+  "dgSpecHash": "m2om8Y5/DjRx5/CwEnngzIaqYc4uaZsXIfCppft3tFD5VP6TyIxhc1vClO+9ByYzWfNNg9dMA/TpVL8JAIk/8A==",
   "success": true,
   "projectFilePath": "C:\\CCMS\\backend\\ASPNETCore\\ASPNETCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vereg\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\vereg\\.nuget\\packages\\json\\1.0.1\\json.1.0.1.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -187,16 +186,5 @@
     "C:\\Users\\vereg\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\vereg\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Пакет \"JSON 1.0.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "libraryId": "JSON",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

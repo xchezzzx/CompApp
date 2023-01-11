@@ -31,7 +31,7 @@ namespace ASPNETCore.Models.DBModels
 
         public virtual ExerciseCategory Category { get; set; } = null!;
         public virtual User CreateUser { get; set; } = null!;
-        public virtual ExersiceLang Lang { get; set; } = null!;
+        public virtual ExerciseLang Lang { get; set; } = null!;
         public virtual ExercisePlatform Platform { get; set; } = null!;
         public virtual Status Status { get; set; } = null!;
         public virtual User UpdateUser { get; set; } = null!;

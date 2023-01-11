@@ -267,6 +267,9 @@ namespace ASPNETCore.Models.DBModels
                     .HasForeignKey(d => d.UpdateUserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_competition_user_modify");
+
+                //entity.Navigation(c => c.State).AutoInclude();
+                //entity.Navigation(c => c.Status).AutoInclude();
             });
 
             //modelBuilder.Entity<CompetitionDssTracking>(entity =>
@@ -320,6 +323,7 @@ namespace ASPNETCore.Models.DBModels
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
                     .HasColumnName("name");
+
             });
 
             //modelBuilder.Entity<CompetitionStateDssTracking>(entity =>

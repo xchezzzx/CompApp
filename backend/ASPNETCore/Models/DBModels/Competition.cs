@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ASPNETCore.Interfaces.Common;
 
 namespace ASPNETCore.Models.DBModels
 {
-    public partial class Competition
+    public partial class Competition : IFillable
     {
         public Competition()
         {

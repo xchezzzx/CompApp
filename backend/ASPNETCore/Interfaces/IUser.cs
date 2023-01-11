@@ -4,9 +4,12 @@ namespace ASPNETCore.Interfaces
 {
     public interface IUser
     {
-        IEnumerable<User> GetUsers { get; }
-        IEnumerable<User> GetActiveUsers { get; }
-        User GetUser(int id);
+        List<User> GetUsers { get; }
+        List<User> GetActiveUsers { get; }
+        User GetUserById(int userId);
+        void AddNewUser(User user, int userCreateId);
+        void UpdateUser(User user, int userUpdateId);
+        void DeleteUser(User user, int userUpdateId);
 
     }
 }

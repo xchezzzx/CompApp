@@ -31,7 +31,7 @@ namespace BlazorWeb.Services
                 HubConnection.On<List<CompetitionDT>>("Send", c => _getAllCompetitions = c);
 
                 await HubConnection.StartAsync();
-                await HubConnection.InvokeAsync("SendCompetitions");
+                await HubConnection.InvokeAsync("SendGenericCompetitions", "State", "Status");
                 await HubConnection.StopAsync();
             }
             return _getAllCompetitions;
