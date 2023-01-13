@@ -273,8 +273,7 @@ C:\CCMS\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawi
 C:\CCMS\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\CCMS\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\CCMS\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\CCMS\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\appsettings.Development.json
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\appsettings.json
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\ASPNETCore.exe
@@ -288,6 +287,7 @@ D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\Humanizer.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\Json.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\MessagePack.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\MessagePack.Annotations.dll
+D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.Build.dll
@@ -383,6 +383,7 @@ D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\ru\Microsoft.CodeAnalysis
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
@@ -528,6 +529,7 @@ D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\runtimes\unix\lib\net6.0\
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ASPNETCore.csproj.AssemblyReference.cache
 D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ASPNETCore.GeneratedMSBuildEditorConfig.editorconfig
 D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ASPNETCore.AssemblyInfoInputs.cache
@@ -548,5 +550,3 @@ D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\refint\ASPNETCore.dll
 D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ASPNETCore.pdb
 D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ASPNETCore.genruntimeconfig.cache
 D:\sources\CompApp\backend\ASPNETCore\obj\Debug\net6.0\ref\ASPNETCore.dll
-D:\sources\CompApp\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\CCMS\backend\ASPNETCore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

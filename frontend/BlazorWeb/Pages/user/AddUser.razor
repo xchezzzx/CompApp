@@ -2,7 +2,8 @@
 @using BlazorWeb.Enums;
 @attribute [Authorize]
 
-<div class="row mb-5">
+<div class="row mb-4">
+
 	<div class="col-1 text-start">
 		<a class="btn btn-primary"
 		   href="/users/"
@@ -10,12 +11,15 @@
 			<span class="oi oi-arrow-left" aria-hidden="true"></span>
 		</a>
 	</div>
+
 	<div class="col-6">
 		<h3>Adding new user:</h3>
 	</div>
+
 </div>
 
 <div class="row">
+
 	<EditForm Model="@newUser" OnValidSubmit="@sendNewUser">
 		<div class="row">
 
@@ -29,6 +33,7 @@
 						<InputText type="text"
 								   class="form-control"
 								   id="firstName"
+								   DisplayName="First Name"
 								   placeholder="Enter user first name"
 								   @bind-Value=newUser.FirstName />
 						<ValidationMessage For="() => newUser.FirstName" />
@@ -55,7 +60,7 @@
 								   id="email"
 								   placeholder="Enter user email"
 								   @bind-Value=newUser.Email />
-						<ValidationMessage For="() => newUser.Email" />
+						<ValidationMessage For="(() => newUser.Email)" />
 					</div>
 				</div>
 
@@ -92,8 +97,9 @@
 						<InputNumber type="number"
 									 class="form-control"
 									 id="points"
+									 DisplayName="Points"
 									 @bind-Value="newUser.PointsSummary"
-									 ParsingErrorMessage="Must be an integer value" />
+									 ParsingErrorMessage="{0} must be an integer value" />
 						<div id="passHelp" class="form-text">Enter points if person has</div>
 					</div>
 				</div>

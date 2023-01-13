@@ -1,8 +1,12 @@
-﻿namespace BlazorWeb.Models.DataTransferModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BlazorWeb.Models.DataTransferModels
 {
 	public class TeamDT
 	{
-		public int Id { get; set; }
+		public int? Id { get; set; }
+
+		[Required, Display(Name = "team name")]
 		public string Name { get; set; } = null!;
 		public byte[]? Icon { get; set; }
 		public int? SumPoints { get; set; }
